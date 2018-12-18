@@ -1,0 +1,33 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/blog
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    minEvictableIdleTimeMillis: 30000
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    database: 0
+    timeout: 5000
+#  data:
+#    mongodb:
+#      uri: mongodb://jxyd:123456@127.0.0.1:27017/shop
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+web:
+  host:
+    url: http://94.191.96.136:8080
+    white: http://94.191.96.136:8080,http://94.191.96.136:8888
+    app:
+      url: http://94.191.96.136:8888
+    file:
+      url:
